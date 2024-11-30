@@ -1,0 +1,21 @@
+package es.florida.AE02_ADD_XML_MySQL;
+
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException, SQLException {
+		Vista vista = new Vista();
+		VistaLogin vistaLogin = new VistaLogin();
+		Modelo modelo = new Modelo();
+		Controlador controlador = new Controlador(modelo, vista, vistaLogin);
+		
+//		File popu = new File("AE02_population.csv");
+//		String[] cabecera = modelo.obtenereCabeceraCSV(popu);
+//		Modelo.crearTablaPopulation(cabecera);
+//		modelo.leerCSV("AE02_population.csv");
+	}
+
+}

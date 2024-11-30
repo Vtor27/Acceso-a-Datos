@@ -1,0 +1,14 @@
+package es.florida.AE02_ADD_XML_MySQL;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		Vista vista = new Vista();
+		VistaLogin vistaLogin = new VistaLogin();
+		Modelo modelo = new Modelo();
+		Controlador controlador = new Controlador(modelo, vista, vistaLogin);
+	}
+}

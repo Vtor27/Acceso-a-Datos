@@ -1,0 +1,95 @@
+package es.florida.AE02_ADD_XML_MySQL;
+
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+
+public class VistaLogin extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+	
+	private JButton btnLogin_Login;
+	private JButton btnRegistrar_Login;
+	private JTextField textField_User;
+	private JPasswordField passwordField_Password;
+	private JPasswordField passwordField_RepitePasword;
+
+	
+	public VistaLogin() {
+		setBounds(100, 100, 331, 343);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+		contentPanel.setLayout(null);
+		{
+			JLabel lblNewLabel = new JLabel("LOGIN");
+			lblNewLabel.setFont(new Font("Calibri", Font.BOLD, 40));
+			lblNewLabel.setBounds(84, 11, 120, 49);
+			contentPanel.add(lblNewLabel);
+		}
+		{
+			JLabel lblUser = new JLabel("User:");
+			lblUser.setFont(new Font("Calibri", Font.PLAIN, 15));
+			lblUser.setBounds(45, 73, 46, 14);
+			contentPanel.add(lblUser);
+		}
+		{
+			textField_User = new JTextField();
+			textField_User.setFont(new Font("Calibri", Font.PLAIN, 15));
+			textField_User.setBounds(47, 86, 226, 20);
+			contentPanel.add(textField_User);
+			textField_User.setColumns(10);
+		}
+		{
+			JLabel lblContraseña = new JLabel("Contraseña:");
+			lblContraseña.setFont(new Font("Calibri", Font.PLAIN, 15));
+			lblContraseña.setBounds(45, 127, 86, 14);
+			contentPanel.add(lblContraseña);
+		}
+		{
+			JLabel lblRepiteContraseña = new JLabel("Respite la Contraseña:");
+			lblRepiteContraseña.setFont(new Font("Calibri", Font.PLAIN, 15));
+			lblRepiteContraseña.setBounds(45, 183, 152, 14);
+			contentPanel.add(lblRepiteContraseña);
+		}
+		{
+			btnLogin_Login = new JButton("Login");
+			btnLogin_Login.setFont(new Font("Calibri", Font.PLAIN, 15));
+			btnLogin_Login.setBounds(94, 225, 110, 29);
+			contentPanel.add(btnLogin_Login);
+		}
+		{
+			btnRegistrar_Login = new JButton("Registrar");
+			btnRegistrar_Login.setFont(new Font("Calibri", Font.PLAIN, 15));
+			btnRegistrar_Login.setBounds(94, 265, 110, 29);
+			contentPanel.add(btnRegistrar_Login);
+		}
+		
+		passwordField_Password = new JPasswordField();
+		passwordField_Password.setFont(new Font("Calibri", Font.PLAIN, 15));
+		passwordField_Password.setBounds(45, 139, 228, 20);
+		contentPanel.add(passwordField_Password);
+		
+		passwordField_RepitePasword = new JPasswordField();
+		passwordField_RepitePasword.setFont(new Font("Calibri", Font.PLAIN, 15));
+		passwordField_RepitePasword.setBounds(45, 194, 228, 20);
+		contentPanel.add(passwordField_RepitePasword);
+	}
+//	private JButton btnLogin_Login;
+//	private JButton btnRegistrar_Login;
+//	private JTextField textField_User;
+//	private JPasswordField passwordField_Password;
+//	private JPasswordField passwordField_RepitePasword;
+
+	public JButton getBtnLogin_Login() {
+		
+	}	
+	
+	
+}

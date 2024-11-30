@@ -1,0 +1,13 @@
+package es.florida.AE02_ADD_XML_MySQL;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Vista vista = new Vista();
+		VistaLogin vistaLogin = new VistaLogin();
+		Modelo modelo = new Modelo();
+		Controlador controlador = new Controlador(modelo, vista, vistaLogin);
+		Modelo.conexionDB();
+	}
+
+}
